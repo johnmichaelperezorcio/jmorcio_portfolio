@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<!--1. Basic Structure-->
+    <head>
+        <title>My Personal Webpage</title>
+        <link rel="icon" type="image/png" href="favicon.png">
+<!--    <link rel="stylesheet" href="css/bootstrap.css"/>-->
+            <style>
+                body { 
+                    background-color: lightgray; 
+                } h1 { 
+                    color: blue; 
+                } h2 { 
+                    text-align: center; 
+                } h3 { 
+                    text-transform: uppercase; 
+                } p { 
+                    font-size: 18px;
+                    line-height: 1.6; 
+                } a { 
+                    color: red; 
+                    text-decoration: none; 
+                } ul { 
+                    list-style-type: square; 
+                } ol { 
+                    list-style-type: upper-roman; 
+                } li { 
+                    margin: 5px; 
+                } table { 
+                    border: 1px solid black; 
+                } th { 
+                    background-color: lightblue; 
+                } td { 
+                    padding: 10px; 
+                } img { 
+                    width: 200px; 
+                    border-radius: 10px; 
+                } button { 
+                    background-color: green; 
+                    color: white; 
+                    padding: 8px; 
+                } form { 
+                    border: 1px solid gray; 
+                    padding: 15px; 
+                } input { 
+                    border: 2px solid blue; 
+                } textarea { 
+                    width: 300px; 
+                    height: 100px; 
+                } audio { 
+                    width: 250px; 
+                } video { 
+                    border: 5px solid black; 
+                } #main-title { 
+                    color: darkred; 
+                    font-size: 30px; 
+                } #intro-text { 
+                    font-style: italic; 
+                } #student-table { 
+                    border-collapse: collapse; 
+                } #profile-pic { 
+                    border-radius: 50%; 
+                } #submit-btn { 
+                    background-color: orange; 
+                    padding: 10px; 
+                } #container { 
+                    margin: 20px; 
+                    padding: 20px; 
+                    background-color: #eee; 
+                } #email-field { 
+                    border: 1px solid red; 
+                } #home-link { 
+                    color: purple; 
+                } #login-form { 
+                    background: #f9f9f9; 
+                    padding: 15px; 
+                } #footer-text { 
+                    text-align: right; 
+                } .paragraph { 
+                    font-family: Arial, sans-serif; 
+                } .title { 
+                    color: navy; 
+                } .btn { 
+                    background-color: teal; 
+                    color: white; 
+                    padding: 10px 15px; 
+                } .rounded-img { 
+                    border-radius: 15px; 
+                } .card { 
+                    border: 1px solid #ccc; 
+                    padding: 20px; 
+                    margin: 10px; 
+                } .highlight { 
+                    background-color: yellow; 
+                } .nav-link { 
+                    color: darkgreen; 
+                    margin-right: 15px; 
+                } .list-item { 
+                    font-weight: bold; 
+                } .input-field { 
+                    border: 2px solid gray; 
+                    padding: 5px;
+                } .footer-note { 
+                    font-size: 12px; 
+                    color: gray; 
+                } 
+            </style>
+    </head>
+
+    <body>
+        <!-- Content goes here -->
+         <h1>
+            <!--Student's Full Name-->
+            John Michael Perez Orcio
+        </h1>
+        <h2>
+            <!--About the student-->
+            This will be John Michael P. Orcio's personal website that will serve as his portfolio or compilation of exercises in the course IS Elec 2: Web Systems and Technology
+        </h2>
+        <p>
+            Hello, I am John Michael Perez Orcio or you can just call me "JM". I am a 3rd-year IT Animation student and I hope to have lots and lots of money tomorrow.
+        </p>
+            I believe my passion is I would say is very much is inclined with arts. <br>
+            But I don't really wanna use that fashion as my mainstream of income because if I do so, I would lose myself in the process. <br>
+            I said that because I've been through it before and it made me hate what I should be loving instead the most--art and myself.
+        <p>
+            Hello, I am John Michael Perez Orcio or you can just call me "JM". I am a 3rd-year IT Animation student and I hope to have lots and lots of money tomorrow.
+            <hr>
+        </p>
+        <p>
+            My name is <b>John Michael P. Orcio</b>.
+        </p>
+        <p>
+            I like <i>watching</i> animes, kdramas and western series/movies. And I also enjoy <i>reading</i> webtoons, mangas and manhwas.
+        </p>
+        <p>
+            I am an <u>artist</u>.
+        </p>
+        <ol>
+            <li>Fried Chicken</li>
+            <li>Grilled Chicken</li>
+            <li>Pork Steak</li>
+        </ol>
+        <ul>
+            <li>Walking</li>
+            <li>Watching Movies</li>
+            <li>Drawing</li>
+        </ul>  
+        <img src="kit.jpg" alt="Error 404" width="200"><br>
+        <a href="https://www.google.com">Visit Google</a><br>
+        <a href="mailto:johnmichaelperez.orcio@bicol-u.edu.ph">Send me an Email</a><br>
+        <table border="2">
+            <tr>
+                <td>Name</td>
+                <td>Age</td>
+            </tr>
+            <tr>
+                <td>JM</td>
+                <td>22</td>
+            </tr>
+        </table><br>    
+         <form>
+            Name: <input type="text" name="fullname"/>
+            Password: <input type="password" name="pwd"/>
+            <button type="submit">
+                Submit
+            </button>
+        </form>   
+        <!--Comments do not show in the browser. Today, August 29, 2025, I am not feeling well.-->    
+        <form> 
+            <p>Gender:</p> 
+            <input type="radio" name="gender" value="male"> Male<br> 
+            <input type="radio" name="gender" value="female"> Female 
+        </form>
+        <form> 
+            <p>Hobbies:</p>
+            <input type="checkbox"> Drawing<br>
+            <input type="checkbox" name="hobby" value="reading"> Reading<br> 
+            <input type="checkbox" name="hobby" value="sports"> Sports<br> 
+            <input type="checkbox" name="hobby" value="travel"> Travel
+        </form><br>
+            <label for="country">Select Country:</label> 
+            <select id="country"> 
+                <option>Philippines</option> 
+                <option>Korea</option> 
+                <option>Japan</option> 
+            </select> 
+        </form><br>
+        <form> 
+            <label for="message">Message:</label><br> 
+            <textarea id="message" rows="4" cols="30"></textarea> 
+        </form><br>
+        <audio controls> 
+            <source src="song.mp3" type="audio/mpeg"> 
+        </audio><br>
+        <video width="320" controls> 
+            <source src="movie.mp4" type="video/mp4"> 
+        </video><br>
+        <iframe src="https://www.wikipedia.com" width="600" height="400"></iframe> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/XErUU7UveX0" frameborder="0" allowfullscreen></iframe>
+        <p>Carbon dioxide chemical formula: CO<sub>2</sub></p> 
+        <p>x<sup>2</sup></p>
+        <p>Please <strong>remember</strong> that there will be an exam next week!</p>  
+        <p>Please <em>do not forget</em> to keep your promises.</p>
+        <p><small>© 2025 My Personal Website</small></p>
+        <blockquote>"Do unto others as you would have them do unto you."</blockquote>
+        <p>I said, <q>Fake it, until you make it.</q></p>
+        <p><abbr title="Cascading Style Sheets">CSS</abbr> is the language used to style and visually format web pages.</p> 
+        <address> 
+            Written by JM Orcio<br> 
+            Visit us at www.mywebsite.com<br> 
+            Albay, Philippines 
+        </address>
+        <p>You are <mark>beautiful</mark> with a heart.</p>
+        <p>Task Progress:</p>
+       <progress value="50" max="100"></progress>   
+       
+    </body>
+    
+
+</html>
