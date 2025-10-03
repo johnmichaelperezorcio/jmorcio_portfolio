@@ -77,6 +77,31 @@
                 color: lightgoldenrodyellow;
             }
             
+            .custom-carousel {
+            padding: 2rem 0;
+            }
+
+            .image-frame {
+            width: 100%;
+            max-width: 370px;
+            height: 500px;
+            margin: auto;
+            border: transparent;
+            border-radius: 15px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: none;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            }
+
+            .image-frame img {
+            max-width: auto;
+            max-height: 100%;
+            object-fit: cover;
+            }
+
         </style>
 
     </head>
@@ -100,7 +125,7 @@
                             </div>
                     </div>
                     <div class="col-md-5 text-center">
-                        <img src="main.jpg" alt="Hero Image Not Found" class="img-fluid rounded" width="400" height="600">
+                        <img src="assets/main.jpg" alt="Hero Image Not Found" class="img-fluid rounded" width="400" height="600">
                     </div>
                 </div>
             </section>
@@ -111,7 +136,7 @@
                     <div class="container-fluid my-4">
                         <div class="row text-center no-outline-links" id="nav">
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#">All Collections</a>
+                            <a href="#" class="active" >All Collections</a>
                             </div>
                             <div class="col-md-2 col-6 mb-2">
                             <a href="#">Digital Art</a>
@@ -132,6 +157,43 @@
                     </div>
                 </nav>
             </div>
+            <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Slides -->
+                <div class="carousel-inner custom-carousel">
+                    <div class="carousel-item active">
+                        <div class="image-frame">
+                        <img src="assets/trad1.png" class="img-fluid" alt="Traditional Art 1">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-frame">
+                        <img src="assets/trad2.jpg" class="img-fluid" alt="Traditional Art 2">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-frame">
+                        <img src="assets/trad3.png" class="img-fluid" alt="Traditional Art 3">
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Controls -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
         </section>
 <!--       <section class="home">
             <div class="home-left">
