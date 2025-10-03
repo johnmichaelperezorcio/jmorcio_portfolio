@@ -47,7 +47,7 @@
 
             #hero {
                 display: flex;
-                padding: 50px 0;
+                padding: 100px 0;
             }
 
             .button {
@@ -67,6 +67,12 @@
                 color: white;
             }
 
+            #about-section {
+                width: 100%;
+                min-height: 100vh;
+                background-color: bisque;
+            }
+
             #collection-section {
                 width: 100%;
                 min-height: 100vh;
@@ -78,123 +84,292 @@
             }
             
             .custom-carousel {
-            padding: 2rem 0;
+                padding: 2rem 0;
             }
 
             .image-frame {
-            width: 100%;
-            max-width: 370px;
-            height: 500px;
-            margin: auto;
-            border: transparent;
-            border-radius: 15px;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: none;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
-            }
+                width: 100%;
+                max-width: 370px;
+                height: 500px;
+                margin: auto;
+                border-radius: 15px;
+                overflow: hidden;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: none;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+                }
 
             .image-frame img {
-            max-width: auto;
-            max-height: 100%;
-            object-fit: cover;
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+            }
+
+            .image-frame:hover img {
+                transform: scale(1.05);
             }
 
         </style>
 
     </head>
     <body>
-        <main>
-            <header>   
-                <a href="#" class="logo">
-                    <h3>
-                        <b>🖌️Jann.emm</b> 
-                    </h3>
-                </a>
-            </header>
-            <section class="container" id="home-section">
-                <div class="row" id="hero">
-                    <div class="col-md-7" id="profile-desc">
-                            <h1>Jann.emm</h1>
-                            <h3>IT Animation student. Artist. Creative. Traditional drawing. Digital Creator.</h3>
-                            <p>Welcome to my website, this is jann.emm and in here is the collection of wroks I have been working on for the past years.</p>
-                            <div>
-                                <a href="#" class="button">Hire me</a>
-                            </div>
-                    </div>
-                    <div class="col-md-5 text-center">
-                        <img src="assets/main.jpg" alt="Hero Image Not Found" class="img-fluid rounded" width="400" height="600">
+        <header>   
+            <a href="#" class="logo">
+                <h3>
+                    <b>🖌️Jann.emm</b> 
+                </h3>
+            </a>
+        </header>
+        <section class="container" id="home-section">
+            <div class="row" id="hero">
+                <div class="col-md-7" id="profile-desc">
+                    <h1>Jann.emm</h1>
+                    <h3>IT Animation student. Artist. Creative. Traditional drawing. Digital Creator.</h3>
+                    <p>Welcome to my website, this is jann.emm and in here is the collection of wroks I have been working on for the past years.</p>
+                    <div>
+                        <a href="#" class="button">Hire me</a>
                     </div>
                 </div>
-            </section>
-        </main>
+                <div class="col-md-5 text-center">
+                        <img src="assets/main.jpg" alt="Hero Image Not Found" class="img-fluid rounded" width="400" height="600">
+                </div>
+            </div>
+        </section>
+        <section class="container-fluid" id="about-section">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="assets/trad4.png" alt="image error" class="img-fluid" style="padding: 100px;">
+                </div>
+                <div class="col-md-6">
+                    <div style="justify-content: center; padding: 100px 100px 50px 0px;">
+                        <h1><b>About me</b></h1>
+                        <p>Hi, my name is John Michael Orcio or "jann.emm" on different digital platforms. I am 22 years old and I live in my house. As a passionate artist and creative, I strive to express ideas through both traditional and digital mediums. My journey in IT Animation has allowed me to explore new techniques and technologies, blending creativity with innovation. I aspire to continue growing as an artist, sharing my work with a wider audience, and collaborating with other creatives. My goal is to inspire others, contribute to the art community, and eventually work on projects that combine storytelling, design, and technology.</p>
+                    </div>
+                        <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="container-fluid" id="collection-section">
             <div class="row">
                 <nav>
                     <div class="container-fluid my-4">
                         <div class="row text-center no-outline-links" id="nav">
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#" class="active" >All Collections</a>
+                            <a href="#" class="nav-link active" data-target="carousel-all">All Collections</a>
                             </div>
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#">Digital Art</a>
+                            <a href="#" class="nav-link" data-target="carousel-digital">Digital Art</a>
                             </div>
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#">Traditional Art</a>
+                            <a href="#" class="nav-link" data-target="carousel-traditional">Traditional Art</a>
                             </div>
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#">3D</a>
+                            <a href="#" class="nav-link" data-target="carousel-3d">3D</a>
                             </div>
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#">Landscapes</a>
+                            <a href="#" class="nav-link" data-target="carousel-landscapes">Landscapes</a>
                             </div>
                             <div class="col-md-2 col-6 mb-2">
-                            <a href="#">Commissions</a>
+                            <a href="#" class="nav-link" data-target="carousel-commissions">Commissions</a>
                             </div>
                         </div>
                     </div>
                 </nav>
             </div>
-            <div id="photoCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+            <div id="carousel-all" class="carousel slide category-carousel" data-bs-ride="carousel">
                 <!-- Indicators -->
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#photoCarousel" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carousel-all" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel-all" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-all" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Slides -->
+
+                <!-- All Collections -->
+                <div class="carousel-inner custom-carousel">
+                    <div class="carousel-item active">
+                        <div class="image-frame">
+                            <img src="assets/digi3.png" class="img-fluid" alt="Error">
+                        </div>
+                        <div class="image-description" style="color: bisque;">
+                            <center>
+                                <p><b>Artwork Title: </b><br>
+                                    Description: This is made during the midst of chaos and I what? Ano daw?!
+                                </p>
+                            </center>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="image-frame">
+                            <img src="assets/trad3.png" class="img-fluid" alt="Error">
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="image-frame">
+                            <img src="assets/digi5.png" class="img-fluid" alt="Error">
+                        </div>
+                    </div>
+                </div>
+
+                <!--Controls-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-all" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-all" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+
+            <!--Digital Collection-->
+            <div id="carousel-digital" class="carousel slide category-carousel d-none" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-digital" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel-digital" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-digital" data-bs-slide-to="2"></button>
                 </div>
 
                 <!-- Slides -->
                 <div class="carousel-inner custom-carousel">
                     <div class="carousel-item active">
                         <div class="image-frame">
-                        <img src="assets/trad1.png" class="img-fluid" alt="Traditional Art 1">
+                            <img src="assets/digi1.png" class="img-fluid" alt="Error">
+                        </div>
+                        <div class="image-description" style="color: bisque;">
+                            <center>
+                                <p><b>Artwork Title: </b><br>
+                                    Description: This is made during the midst of chaos and I what? Ano daw?!
+                                </p>
+                            </center>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">
+                        <div class="image-frame">
+                            <img src="assets/digi2.png" class="img-fluid" alt="Error">
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="image-frame">
-                        <img src="assets/trad2.jpg" class="img-fluid" alt="Traditional Art 2">
+                            <img src="assets/digi3.png" class="img-fluid" alt="Error">
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="image-frame">
-                        <img src="assets/trad3.png" class="img-fluid" alt="Traditional Art 3">
+                </div>
+
+                <!--Controls-->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel-digital" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel-digital" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+
+                <!--Indicator
+            <div id="carousel-digital" class="carousel slide category-carousel d-none" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-digital" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel-digital" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-digital" data-bs-slide-to="2"></button>
+                </div>
+                <!-- Digital Art 
+                <div id="carousel-digital" class="carousel slide category-carousel d-none" data-bs-ride="carousel">
+                    <div class="carousel-inner custom-carousel">
+                        <div class="carousel-item active">
+                            <div class="image-frame">
+                                <img src="assets/digi1.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-frame">
+                                <img src="assets/digi2.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-frame">
+                                <img src="assets/digi3.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Indicator
+            <div id="carousel-traditional" class="carousel slide category-carousel d-none" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-traditional" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel-traditional" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-traditional" data-bs-slide-to="2"></button>
+                </div>
+
+                <!-- Traditional Art
+                <div id="carousel-traditional" class="carousel slide category-carousel d-none" data-bs-ride="carousel">
+                    <div class="carousel-inner custom-carousel">
+                        <div class="carousel-item active">
+                            <div class="image-frame">
+                                <img src="assets/trad1.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-frame">
+                                <img src="assets/trad2.jpg" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-frame">
+                                <img src="assets/trad3.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                <!-- 3D
+                <div id="carousel-3d" class="carousel slide category-carousel d-none" data-bs-ride="carousel">
+                    <div class="carousel-inner custom-carousel">
+                         <div class="carousel-item active">
+                            <div class="image-frame">
+                                <img src="assets/digi5.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-frame">
+                                <img src="assets/digi4.png" class="img-fluid" alt="Error">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="image-frame">
+                                <img src="assets/digi6.png" class="img-fluid" alt="Error">
+                            </div>
                         </div>
                     </div>
                 </div>
 
 
-                <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </button>
-            </div>
+                <!-- Controls
+                <div class="text-center my-3">
+                    <button class="carousel-control-prev" type="button" id="carousel-prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" id="carousel-next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>  
+            </div> -->
 
-        </section>
 <!--       <section class="home">
             <div class="home-left">
                 <h1>Hi, It's <span>jann.emm</span></h1>
@@ -214,5 +389,55 @@
             </div>
         </section>--> 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            function getVisibleCarouselId() {
+                const visible = document.querySelector('.category-carousel:not(.d-none)');
+                return visible ? `#${visible.id}` : null;
+            }
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Update active link
+                    document.querySelectorAll('.nav-link').forEach(nav => nav.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Hide all carousels
+                    document.querySelectorAll('.category-carousel').forEach(carousel => {
+                    carousel.classList.add('d-none');
+                    });
+
+                    // Show selected carousel
+                    const targetId = this.getAttribute('data-target');
+                    const targetCarousel = document.getElementById(targetId);
+                    targetCarousel.classList.remove('d-none');
+
+                    // Reset to first slide
+                    const carouselInstance = bootstrap.Carousel.getOrCreateInstance(targetCarousel);
+                    carouselInstance.to(0);
+                });
+            });
+
+
+            document.getElementById('carousel-prev').addEventListener('click', () => {
+                const target = getVisibleCarouselId();
+                if (target) {
+                const carousel = bootstrap.Carousel.getOrCreateInstance(document.querySelector(target));
+                carousel.prev();
+                }
+            });
+
+            document.getElementById('carousel-next').addEventListener('click', () => {
+                const target = getVisibleCarouselId();
+                if (target) {
+                const carousel = bootstrap.Carousel.getOrCreateInstance(document.querySelector(target));
+                carousel.next();
+                }
+            });
+        </script>
+
+
     </body>
 </html>
